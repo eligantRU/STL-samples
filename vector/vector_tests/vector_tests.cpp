@@ -21,6 +21,13 @@ BOOST_AUTO_TEST_SUITE(Get_Ints)
 			const auto nums = GetInts(input);
 			BOOST_CHECK(nums == expectedResult);
 		}
+
+		{
+			std::stringstream input("lorem ipsum dolor sit amet...");
+			const std::vector<int> expectedResult = {};
+			const auto nums = GetInts(input);
+			BOOST_CHECK(nums == expectedResult);
+		}
 	}
 
 BOOST_AUTO_TEST_SUITE_END()
